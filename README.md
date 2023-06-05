@@ -17,17 +17,16 @@ So here we have two models - LSTM and BERT
   - ReLU
   - Linear
   
-    The only downside of this solution is that it solves regression task, instead of honest text2text
-    
-    Some attempts were made to solve it as text2text, but I've bailed on it
-    
-    Nevertheless, I can say a few words about possible solution:
-    - CosineEmbeddingLoss works very well in this task
-        > Because we use *vectorized* representations of numbers (e.g. 42 -> [4, 2]), we can't really use L1Loss or MSELoss, but we can use vector-specific losses such as cosine one
-    - Reversing input gives some boost to score
+  The only downside of this solution is that it solves regression task, instead of honest text2text
+
+  Some attempts were made to solve it as text2text, but I've bailed on it
+
+  Nevertheless, I can say a few words about possible solution:
+  - CosineEmbeddingLoss works very well in this task
+      > Because we use *vectorized* representations of numbers (e.g. 42 -> [4, 2]), we can't really use L1Loss or MSELoss, but we can use vector-specific losses such as cosine one
+  - Reversing input gives some boost to score
     
 ## BERT
-[Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs)
 
 # Evaluation
 Input (LSTM) `2+2`
@@ -36,11 +35,19 @@ Input (BERT) `2+2=[MASK]`
 
 Output `4`
 
-I've evaluated model on different leng
+## Experiments
+[x] BERT is better than LSTM (as expected)
+[x] I've evaluated model on different lenghts of inputs - left and right
+  - Longer input - worse score (possible underfit due to increasing data size)
+  - Model performs better when left input is longer than right
+[] Out of domain testing 
+
+Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs)
 
 ## Metrics
 * MAE/MSE - obvious regression metrics
 * Cosine loss - if you don't care about whole number rather then digits separately
+* Accuracy/Precision/Recall/F1 - if we only care, guessed we number correctly or not
 
 
 # Relevant papers/materials
