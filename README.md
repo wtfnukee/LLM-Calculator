@@ -10,6 +10,7 @@ So here we have two models - LSTM and BERT
   First model that came at my mind is LSTM, because it's fairly simple model that performs well at this type of tasks
   
   Architecture is following:
+  - Input is tokenized as e.g "2+2" -> [2, 10, 2]
   - Embedding layer
   - LSTM
   - LayerNorm
@@ -25,8 +26,16 @@ So here we have two models - LSTM and BERT
   - CosineEmbeddingLoss works very well in this task
       > Because we use *vectorized* representations of numbers (e.g. 42 -> [4, 2]), we can't really use L1Loss or MSELoss, but we can use vector-specific losses such as cosine one
   - Reversing input gives some boost to score
-    
+
 ## BERT
+s
+
+# Train
+## LSTM
+20 epochs for 6 different dataset sizes
+
+## BERT
+s
 
 # Evaluation
 Input (LSTM) `2+2`
