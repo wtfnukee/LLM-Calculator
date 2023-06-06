@@ -31,7 +31,7 @@ So here we have two models - LSTM and BERT
   - Reversing input gives some boost to score
 
 ## BERT
-Very simple but very powerful, just tokenize and pass to Trainer to finetune. It doesnt tune fast, but gives incredible resuls -  near zero test loss for only couple of epochs!
+Very simple but very powerful, just tokenize and pass to Trainer to finetune. Actually, I should did it before, because gives incredible resuls with minimal work -  near zero test loss for only couple of epochs!
 
 # Train
 ## LSTM
@@ -61,6 +61,11 @@ Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=u
 * Cosine loss - if you don't care about whole number rather then digits separately
 * Accuracy/Precision/Recall/F1 - if we only care, guessed we number correctly or not
 
+## Conclusions
+Let's take BERT as our final model because it performs the best
++ It's small - only 110M params!
++ Relatively endless input - I've tried 512 max (two ~200 digits numbers) 
++ 
 
 # Relevant papers/materials
 * http://arxiv.org/abs/1410.4615
