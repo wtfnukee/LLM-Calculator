@@ -31,14 +31,14 @@ So here we have two models - LSTM and BERT
   - Reversing input gives some boost to score
 
 ## BERT
-s
+Very simple but very powerful, just tokenize and pass to Trainer to finetune. It doesnt tune fast, but gives incredible resuls -  near zero test loss for only couple of epochs!
 
 # Train
 ## LSTM
 20 epochs for 6 different dataset sizes
 
 ## BERT
-s
+10 epochs for one dataset
 
 # Evaluation
 Input (LSTM) `2+2`
@@ -52,7 +52,7 @@ Output `4`
 - [x] I've evaluated model on different lenghts of inputs - left and right
   - Longer input - worse score (possible underfit due to increasing data size as model remains the same)
   - Model performs better when left input is longer than right
-- [ ] Out of domain testing 
+- [x] Out of domain testing 
 
 Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs)
 
