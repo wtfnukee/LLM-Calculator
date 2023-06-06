@@ -1,6 +1,9 @@
 # LLM-Calculator
 
 ![https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs](https://img.shields.io/badge/Weights_&_Biases-FFCC33?style=for-the-badge&logo=WeightsAndBiases&logoColor=black)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
+🤗 HuggingFace Transformers
 
 # Model choice
 So here we have two models - LSTM and BERT
