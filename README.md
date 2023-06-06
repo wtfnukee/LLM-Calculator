@@ -32,6 +32,7 @@ So here we have two models - LSTM and BERT
 
 ## BERT
 [Check out code at Colab](https://colab.research.google.com/drive/1TQ8qUq3Or4U-hAdy8iOpkxRSdnWLKIia?usp=sharing)
+
 Very simple yet powerful, just tokenize and pass to Trainer to finetune. Actually, I should did it before, because gives incredible resuls with minimal work -  near zero test loss for only couple of epochs!
 
 # Train
@@ -64,9 +65,12 @@ Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=u
 
 ## Conclusions
 Let's take BERT as our final model because it performs the best
-+ It's small - only 110M params!
-+ Relatively endless input - I've tried 512 max (two ~200 digits numbers) 
-+ 
+
+\+ It's small - only 110M params!
+
+\+ Relatively big input - I've tried 512 max (two ~200 digits numbers) 
+
+\- It can accept long inputs, but it performs worse on it
 
 # Relevant papers/materials
 * http://arxiv.org/abs/1410.4615
