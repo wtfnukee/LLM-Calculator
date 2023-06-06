@@ -48,11 +48,11 @@ Input (BERT) `2+2=[MASK]`
 Output `4`
 
 ## Experiments
-[x] BERT is better than LSTM (as expected)
-[x] I've evaluated model on different lenghts of inputs - left and right
-  - Longer input - worse score (possible underfit due to increasing data size)
+- [x] BERT is better than LSTM (as expected)
+- [x] I've evaluated model on different lenghts of inputs - left and right
+  - Longer input - worse score (possible underfit due to increasing data size as model remains the same)
   - Model performs better when left input is longer than right
-[] Out of domain testing 
+- [ ] Out of domain testing 
 
 Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs)
 
