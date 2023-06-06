@@ -31,7 +31,8 @@ So here we have two models - LSTM and BERT
   - Reversing input gives some boost to score
 
 ## BERT
-Very simple but very powerful, just tokenize and pass to Trainer to finetune. Actually, I should did it before, because gives incredible resuls with minimal work -  near zero test loss for only couple of epochs!
+[Check out code at Colab](https://colab.research.google.com/drive/1TQ8qUq3Or4U-hAdy8iOpkxRSdnWLKIia?usp=sharing)
+Very simple yet powerful, just tokenize and pass to Trainer to finetune. Actually, I should did it before, because gives incredible resuls with minimal work -  near zero test loss for only couple of epochs!
 
 # Train
 ## LSTM
