@@ -74,8 +74,22 @@ Let's take BERT as our final model because it performs the best
 
 # Relevant papers/materials
 * http://arxiv.org/abs/1410.4615
+  * Paper about my own literal problem. Authors show that it is possible for LSTM to add two 9-digit numbers with 99%-accuracy
+  * Main topic of paper is empirically evaluating the expressiveness and the learnability of LSTMs in the sequence-to-sequence regime by training them to evaluate short computer programs, a domain that has traditionally been seen as too complex for neural networks.
+  * Also this paper and one below shows that input of LSTM may be optionally be reversed, which was shown to increase performance in many tasks.
 * http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf
+  * The paper presents a general end-to-end approach to sequence learning using multilayered LSTM to map the input sequence to a vector of fixed dimensionality, and another deep LSTM to decode the target sequence from the vector.
+  * On an English to French translation task from the WMT-14 dataset, the LSTM achieved a BLEU score of 34.8 on the entire test set, compared to a phrase-based SMT system's score of 33.3 on the same dataset.
+  * The LSTM learned sensible phrase and sentence representations that are sensitive to word order and are relatively invariant to the active and the passive voice.
+  * Reversing the order of the words in all source sentences (but not target sentences) improved the LSTM's performance markedly.
 * https://arxiv.org/abs/1909.07940
+  8 Most NLP models treat numbers in text as other tokens, embedding them as distributed vectors.
+  * Investigating the numerical reasoning capabilities of a state-of-the-art question answering model on the DROP dataset, the model excels on questions that require numerical reasoning, indicating it already captures numeracy.
+  * Token embedding methods (e.g., BERT, GloVe) were probed on synthetic list maximum, number decoding, and addition tasks to understand how this capability emerges.
+  * Standard embeddings such as GloVe and word2vec accurately encode magnitude for numbers up to 1,000.
+  * Character-level embeddings are even more precise, with ELMo capturing numeracy the best among pre-trained methods.
+  * BERT, which uses sub-word units, is less exact in capturing numeracy.
 * https://towardsdatascience.com/nlp-numeracy-pt-2-embeddings-language-models-and-calculators-615a346737c2
+  * Intro article on numeracy in language models
 * https://keras.io/examples/nlp/addition_rnn/
-* https://habr.com/ru/companies/yandex/articles/493950/ 🥴🥴🥴
+  * Literal solution of my assigment on Keras using LSTM 
