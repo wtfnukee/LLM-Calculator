@@ -21,6 +21,8 @@ So here we have two models - LSTM and BERT
   - ReLU
   - Linear
   
+  > Note on LayerNorm - it was better to use BatchNorm to make LSTM more stable, but LayerNorm was easier to implement and worked just fine
+  
   The only downside of this solution is that it solves regression task, instead of honest text2text
 
   Some attempts were made to solve it as text2text, but I've bailed on it
@@ -35,12 +37,8 @@ So here we have two models - LSTM and BERT
 
 Very simple yet powerful, just tokenize and pass to Trainer to finetune. Actually, I should did it before, because gives incredible resuls with minimal work -  near zero test loss for only couple of epochs!
 
-# Train
-## LSTM
-20 epochs for 6 different dataset sizes
+Here I solve this task as Masked Language Modeling task so my input looks like `2+2=[MASK]`
 
-## BERT
-10 epochs for one dataset
 
 # Evaluation
 Input (LSTM) `2+2`
@@ -60,8 +58,11 @@ Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=u
 
 ## Metrics
 * MAE/MSE - obvious regression metrics
+  * ~0.02 for BERT
+  * ~0.8 for best performing LSTM
 * Cosine loss - if you don't care about whole number rather then digits separately
 * Accuracy/Precision/Recall/F1 - if we only care, guessed we number correctly or not
+  * Pretty low for BERT, because it's only off by one or so, but it's still considered as wrong guess
 
 ## Conclusions
 Let's take BERT as our final model because it performs the best
