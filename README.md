@@ -39,6 +39,10 @@ Very simple yet powerful, just tokenize and pass to Trainer to finetune. Actuall
 
 Here I solve this task as Masked Language Modeling task so my input looks like `2+2=[MASK]`
 
+I've brought basic [bert-base-uncased](https://huggingface.co/bert-base-uncased) and finetuned it on my dataset with numbers. Tune was elegantly done with HuggingFace Trainer API.
+
+Another possible choice is small [Flan-T5](https://huggingface.co/google/flan-t5-small), because it was already pretrained on those type of tasks.
+
 
 # Evaluation
 Input (LSTM) `2+2`
