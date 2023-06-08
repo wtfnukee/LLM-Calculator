@@ -60,14 +60,21 @@ Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=u
 * MAE/MSE - obvious regression metrics
   * ~0.02 for BERT
   * ~0.8 for best performing LSTM
+  * Full results on LSTM on different input lengths
+  * | left\right | 1     | 2      | 3      |
+    |------------|-------|--------|--------|
+    | 1          | 1.451 | 24.946 | 20.295 |
+    | 2          | 0.849 | 1.11   | 36.795 |
+    | 3          | 1.926 | 1.982  | x      |
 * Cosine loss - if you don't care about whole number rather then digits separately
 * Accuracy/Precision/Recall/F1 - if we only care, guessed we number correctly or not
-  * Pretty low for BERT, because it's only off by one or so, but it's still considered as wrong guess
+  * Pretty low even for BERT, because it's only off by one or so, but it's still considered as wrong guess
 
 ## Conclusions
-Let's take BERT as our final model because it performs the best
+Let's take BERT as our final model because it performs the best compared to LSTM
 
 \+ It's small - only 110M params!
+  * It was allowed to use <4B models, so theoretically BERT can perform even better
 
 \+ Relatively big input - I've tried 512 max (two ~200 digits numbers) 
 
