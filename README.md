@@ -10,7 +10,7 @@ So here we have two models - LSTM and BERT
 ## LSTM
   [Check out code at Colab](https://colab.research.google.com/drive/1Talo7MmE689e-KkSXHqVBSiipnXZEWRJ?pli=1#scrollTo=nAMDbVkOVTjA&uniqifier=1)
   
-  First model that came at my mind is LSTM, because it's fairly simple model that performs well at this type of tasks
+  First model that came at my mind is LSTM, because it's simple model that performs well at this type of tasks
   
   Architecture is following:
   - Input is tokenized/"vectorized" as e.g "2+2" -> [2, 10, 2]
@@ -78,7 +78,7 @@ Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=u
 Let's take BERT as our final model because it performs the best compared to LSTM
 
 \+ It's small - only 110M params!
-  * It was allowed to use <4B models, so theoretically BERT can perform even better
+  * It was allowed to use <4B models, so theoretically BERT can perform even better by using bigger version
 
 \+ Can take relatively big input - I've tried 512 max (two ~200 digits numbers) 
 
