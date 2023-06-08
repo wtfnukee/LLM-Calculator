@@ -13,7 +13,7 @@ So here we have two models - LSTM and BERT
   First model that came at my mind is LSTM, because it's fairly simple model that performs well at this type of tasks
   
   Architecture is following:
-  - Input is tokenized as e.g "2+2" -> [2, 10, 2]
+  - Input is tokenized/"vectorized" as e.g "2+2" -> [2, 10, 2]
   - Embedding layer
   - LSTM
   - LayerNorm
@@ -52,7 +52,7 @@ Output `4`
 - [x] I've evaluated model on different lenghts of inputs - left and right
   - Longer input - worse score (possible underfit due to increasing data size as model remains the same)
   - Model performs better when left input is longer than right
-- [x] Out of domain testing 
+- [x] Out of domain testing (e.g. train on 2 digit numbers, evaluate on 3 digit numbers)
 
 Full results are on [Weights&Biases](https://wandb.ai/kwargs/llmcalc?workspace=user-kwargs)
 
@@ -76,7 +76,7 @@ Let's take BERT as our final model because it performs the best compared to LSTM
 \+ It's small - only 110M params!
   * It was allowed to use <4B models, so theoretically BERT can perform even better
 
-\+ Relatively big input - I've tried 512 max (two ~200 digits numbers) 
+\+ Can take relatively big input - I've tried 512 max (two ~200 digits numbers) 
 
 \- It can accept long inputs, but it performs worse on it
 
